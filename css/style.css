@@ -11,15 +11,7 @@ body{
     margin:auto;
 }
 
-.card{
-    width:300px;
-    min-height: 300px;
-    background:white;
-    margin:10px 5px;
-    border-radius: 5px;
-    box-shadow: -5px 5px 20px 1px peachpuff;
-    padding-bottom: 20px;
-}
+
 
 /* ***wrapper*** */
 .wrapper{
@@ -115,6 +107,7 @@ h3{
 .latest{
     display:flex;
     margin-top: 32px;
+    flex-direction: row;
 }
 
 .latest section{
@@ -199,6 +192,16 @@ aside ul{
     justify-content: space-between;
 }
 
+.card{
+    /* min-width:300px; */
+    max-width:  33%;
+    min-height: 300px;
+    background:white;
+    margin:10px 5px;
+    border-radius: 5px;
+    box-shadow: -5px 5px 20px 1px peachpuff;
+    padding-bottom: 20px;
+}
 
 /* *** Subcribe *** */
 
@@ -231,4 +234,67 @@ footer{
     align-items: center;
     font-size: 14px;
     margin-top:30px;
+}
+
+
+.ham,
+.time{
+    display:none;
+}
+
+
+/* Media Query */
+
+/* min-width or max-width */
+@media (max-width:1080px){
+    .latest{
+        display:flex;
+        margin-top: 32px;
+        flex-direction: column;
+    }
+    .latest section{
+        width: 100%;
+        
+    }
+    .latest aside{
+        width: 100%;
+        background: rgb(202, 202, 255);
+    }
+    aside{
+        margin-top:20px;
+    }
+}
+
+@media(max-width:768px){
+    nav{
+        padding:22px 0;
+    }
+    
+    .ham{
+        display:block;
+    }
+
+    .menu{
+        display:none;
+    }
+
+    .rec-card{
+        display:flex;
+        flex-direction: column;
+        
+    }
+    .card{min-width: 100%;}
+}
+
+@media(max-width:576px){
+    .post-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .post-content img{
+        width: 100%;
+        margin-bottom:32px;
+    }
+
 }
